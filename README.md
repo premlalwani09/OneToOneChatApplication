@@ -37,8 +37,11 @@ The **One-to-One Chat Application** is a real-time messaging platform built usin
 ## API Endpoints
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/sendMessage` | POST | Sends a chat message |
-| `/getMessages/{userId}` | GET | Retrieves chat history |
+| `/chat` | WebSocket | Sends a chat message in real-time |
+| `/messages/{senderId}/{recipientId}` | GET | Retrieves chat history between two users |
+| `/user.addUser` | WebSocket | Adds a user to the chat system |
+| `/user.disconnectUser` | WebSocket | Disconnects a user from the chat system |
+| `/users` | GET | Retrieves a list of connected users |
 
 ## How It Works
 1. A WebSocket connection is established between clients and the server.
